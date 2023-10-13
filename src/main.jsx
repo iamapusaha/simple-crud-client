@@ -9,6 +9,7 @@ import {
 import "./index.css";
 import Root from './conponents/Root';
 import Home from './conponents/Home';
+import User from './conponents/User';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path: '/user',
+        element: <User></User>,
+        loader: () => fetch('http://localhost:5000/users')
       }
     ]
   },
