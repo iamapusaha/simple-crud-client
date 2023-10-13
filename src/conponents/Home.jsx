@@ -21,9 +21,9 @@ const Home = () => {
     return (
         <div>
             <form onSubmit={handleAddUser}>
-                <input type="text" name="name" /><br />
-                <input type="email" name="email" id="" /><br />
-                <input type="submit" value="Add User" />
+                <input className="border p-2" placeholder="name" type="text" name="name" /><br />
+                <input className="border p-2" placeholder="email" type="email" name="email" id="" /><br />
+                <button><input type="submit" value="Add User" /></button>
             </form>
         </div>
     );
