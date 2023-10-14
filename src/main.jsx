@@ -10,6 +10,7 @@ import "./index.css";
 import Root from './conponents/Root';
 import Home from './conponents/Home';
 import User from './conponents/User';
+import Update from './conponents/Update';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
         path: '/user',
         element: <User></User>,
         loader: () => fetch('http://localhost:5000/users')
+      },
+      {
+        path: '/update/:id',
+        element: <Update></Update>,
+        loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`)
       }
     ]
   },
